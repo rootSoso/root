@@ -1,0 +1,250 @@
+body {
+  width: 100%;
+  height: 100%;
+}
+.centerLeft {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 130px;
+  height: 100vh;
+  background: #2F323A;
+}
+.centerRight {
+  width: calc(100vw - 130px);
+  height: 100vh;
+  background: #edeff5;
+  float: right;
+}
+.centerRight .logo {
+  width: 100%;
+  height: 80px;
+  background: #2ce;
+}
+
+.list{
+	width: 100%;
+	height: 99px;
+	background: #999999;
+	margin: 30px;
+}
+.list a{
+	float: left;
+	line-height: 99px;
+	font-size: 22px;
+	color: white;
+	-margin-left: 20px;
+	width: 20%;
+	height: 99px;
+	text-align: center;
+}
+.list .white{
+	background: white;
+	color: #000;
+}
+.navList{
+	width: 100%;
+	height: 238px;
+	margin-left: 30px;
+   -background: red;
+}
+.subNav{
+	height: 85px;
+	width: 100%;
+	background: white;
+}
+.subNav a{
+	float: left;
+	font-size: 22px;
+	color: #838383;
+	margin-left: 85px;
+	line-height: 85px;
+	
+}
+.subNav a span{
+	margin-left: 9px;
+    font-size: 13px; 
+    
+}
+.subList{
+	width: 100%;
+	height: 160px;
+	margin-top: 5px;
+}
+.subList ul{
+	display: none;
+}
+.subList .show{
+	display: block;
+}
+.subList ul li{
+	width: 100%;
+	height: 160px;
+	background: white;
+}
+.subList ul li img{
+	float: left;
+	width: 138px;
+	height: 138px;
+	margin-left: 36px;
+	margin-top: 10px;
+}
+.subList ul li p{
+	float: left;
+	line-height: 160px;
+	font-size: 22px;
+	color: #838383;
+}
+.subList ul li p:nth-child(2){
+	margin-left: 38px;
+}
+.subList ul li p:nth-child(3){
+	margin-left: 65px;
+}
+.subList ul li p:nth-child(4){
+	margin-left: 89px;
+}
+.subList ul li p:nth-child(5){
+	margin-left: 78px;
+	font-size: 16px;
+}
+
+.subList ul li a{
+	float: left;
+	line-height: 160px;
+	font-size: 22px;
+	color: #838383;
+	margin-left: 32px;
+	color: #5093e1;
+}
+.left{
+	float: left;
+	width: 55%;
+}
+.right{
+	float: right;
+	-background: red;
+	height: auto;
+	width: 30%;
+	margin-top: 30px;
+	margin-right: 80px;
+}
+.lately {
+	height: 98px;
+	width: 100%;
+	background: white;
+	line-height: 98px;
+	text-align: center;
+	font-size: 22px;
+	color: #838383;
+	
+}
+.lately  span{
+	margin-left: 5px;
+	font-size: 13px;
+	color: #838383;
+}
+.vacation{
+	height: 400px;
+	width: 100%;
+	background: white;
+	margin-top: 5px;
+	overflow: hidden;
+}
+.vacation p{
+	width: 90%;
+	-height: 80px;
+
+	margin: auto;
+		margin-top: 20px;
+}
+.vacation p span{
+	font-size: 20px;
+	float: left;
+	line-height: 80px;
+}
+.vacation p a{
+	float: left;
+	width: 309px;
+	height: 20px;
+	background: #edeff5;
+	border-radius: 10px;
+	margin-left: 30px;
+	color: #838383;
+	margin-top: 32px;
+}
+
+.vacation p a b{
+	width: 30%;
+	background: red;
+	display: block;
+	height: 20px;
+	border-radius: 10px;
+}
+.vacation p:nth-child(2) a b{
+	background: blue;
+}
+.vacation p:nth-child(3) a b{
+	background: pink;
+}
+.vacation p:nth-child(4) a b{
+	background: gray;
+}
+.vacation p i{
+	float: left;
+	font-size: 20px;
+     color: #838383;
+     margin-left: 30px;
+     line-height: 80px;
+}
+.proportion{
+	width: 100%;
+	height: 300px;
+	background: white;
+	margin-top: 5px;
+	overflow: hidden;
+}
+.proportion h1{
+	text-align: center;
+	margin-top: 30px;
+	font-size: 20px;
+	color: #838383;
+}
+.percent{
+	width: 90%;
+	height: 200px;
+	
+	-background: red;
+	margin:  auto;
+	margin-top: 30px;
+}
+.percent a{
+	width: 49%;
+	height: 49%;
+	float: left;
+	margin: 1px;
+}
+.percent a span{
+	display: block;
+	text-align: center;
+	font-size: 35px;
+	color: white;
+	margin-top: 15px;
+}
+.percent a p{
+	text-align: center;
+	font-size: 13px;
+	margin-top: 10px;
+}
+.percent a:nth-child(1){
+	background: pink;
+}
+.percent a:nth-child(2){
+	background: gray;
+}
+.percent a:nth-child(3){
+	background: greenyellow;
+}
+.percent a:nth-child(4){
+	background: blue;
+}

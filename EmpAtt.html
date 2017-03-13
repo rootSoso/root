@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="css/base.css" />
+		<link rel="stylesheet" type="text/css" href="css/EmpAtt.css" />
+	</head>
+
+	<body>
+		<div class="centerLeft"></div>
+		<div class="centerRight">
+			<div class="logo"></div>
+			<div class="left">
+				<div class="list"id="list">
+					<a href="javascript:;" class="white">请假</a>
+					<a href="javascript:;">迟到/早退</a>
+					<a href="javascript:;">出差</a>
+					<a href="javascript:;">加班</a>
+					<a href="javascript:;">矿工</a>
+				</div>
+				<div class="navList">
+					<div class="subNav">
+						<a href="javascript:;">相片</a>
+						<a href="javascript:;">姓名</a>
+						<a href="javascript:;">部门<span>▼</span></a>
+						<a href="javascript:;">请假类型<span>▼</span></a>
+						<a href="javascript:;">日期</a>
+						<a href="javascript:;">操作</a>
+					</div>
+					<div class="subList"id="subList">
+						<ul class="show">
+							<li>
+								<img src="img/2.png" />
+								<p>秦美丽</p>
+								<p>市场部</p>
+								<p>病假</p>
+								<p>09/07/2017-03/13/2017</p>
+								<a href="javascript:;">查看</a>
+							</li>
+						</ul>
+						<ul>
+							<li>
+								<img src="img/1.png" />
+								<p>秦美丽</p>
+								<p>市场部</p>
+								<p>病假</p>
+								<p>09/07/2017-03/13/2017</p>
+								<a href="javascript:;">查看</a>
+							</li>
+						</ul>
+						<ul>
+							<li>
+								<img src="img/2.png" />
+								<p>秦美丽</p>
+								<p>市场部</p>
+								<p>病假</p>
+								<p>09/07/2017-03/13/2017</p>
+								<a href="javascript:;">查看</a>
+							</li>
+						</ul>
+						<ul>
+							<li>
+								<img src="img/1.png" />
+								<p>秦美丽</p>
+								<p>市场部</p>
+								<p>病假</p>
+								<p>09/07/2017-03/13/2017</p>
+								<a href="javascript:;">查看</a>
+							</li>
+						</ul>
+						<ul>
+							<li>
+								<img src="img/2.png" />
+								<p>秦美丽</p>
+								<p>市场部</p>
+								<p>病假</p>
+								<p>09/07/2017-03/13/2017</p>
+								<a href="javascript:;">查看</a>
+							</li>
+						</ul>
+						<ul>
+							<li>
+								<img src="img/2.png" />
+								<p>秦美丽</p>
+								<p>市场部</p>
+								<p>病假</p>
+								<p>09/07/2017-03/13/2017</p>
+								<a href="javascript:;">查看</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="right">
+				<div class="lately">最近一个月<span>▼</span></div>
+				<div class="vacation">
+					<p>
+						<span>调休</span>
+						<a href="javascript:;">
+							<b></b>
+						</a>
+						<i>10人</i>
+					</p>
+					<p>
+						<span>病假</span>
+						<a href="javascript:;">
+							<b></b>
+						</a>
+						<i>10人</i>
+					</p>
+					<p>
+						<span>产假</span>
+						<a href="javascript:;">
+							<b></b>
+						</a>
+						<i>10人</i>
+					</p>
+					<p>
+						<span>事假</span>
+						<a href="javascript:;">
+							<b></b>
+						</a>
+						<i>10人</i>
+					</p>
+				</div>
+				<div class="proportion">
+					<h1>各部门请假比例</h1>
+					<div class="percent">
+						<a href="javascript:;">
+							<span>50%</span>
+							<p>业务部</p>
+						</a>
+						<a href="javascript:;">
+							<span>50%</span>
+							<p>设计部</p>
+						</a>
+						<a href="javascript:;">
+							<span>50%</span>
+							<p>工程</p>
+						</a>
+						<a href="javascript:;">
+							<span>50%</span>
+							<p>财务</p>
+						</a>
+					</div>
+				</div>
+			</div>
+
+		</div>
+		<script>
+		var olist = document.getElementById('list')
+			var aBtn = olist.getElementsByTagName('a');
+			var osubl = document.getElementById('subList')
+			var aDiv = osubl.getElementsByTagName('ul');
+			for(var i = 0; i < aBtn.length; i++) {
+				aBtn[i].index = i;
+				aBtn[i].onclick = function() {
+					for(var i = 0; i < aBtn.length; i++) {
+						aBtn[i].className = '';
+						aDiv[i].className = '';
+					}
+					this.className = 'white';
+					aDiv[this.index].className = 'show';
+				};
+			}
+		</script>
+	</body>
+
+</html>

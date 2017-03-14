@@ -5,7 +5,7 @@
 		<meta charset="UTF-8">
 		<title></title>
 		<link rel="stylesheet" type="text/css" href="css/base.css" />
-		<link rel="stylesheet" type="text/css" href="css/EmpAtt.css" />
+		<link rel="stylesheet" type="text/css" href="css/Personnel.css" />
 		<script src="js/echarts.min.js"></script>
 	</head>
 
@@ -14,30 +14,30 @@
 		<div class="centerRight">
 			<div class="logo"></div>
 			<div class="left">
-				<div class="list"id="list">
-					<a href="javascript:;" class="white">请假</a>
-					<a href="javascript:;">迟到/早退</a>
-					<a href="javascript:;">出差</a>
-					<a href="javascript:;">加班</a>
-					<a href="javascript:;">矿工</a>
+				<div class="list" id="list">
+					<a href="javascript:;" class="white">转正</a>
+					<a href="javascript:;">平调</a>
+					<a href="javascript:;">升迁</a>
+					<a href="javascript:;">退休</a>
+					<a href="javascript:;">离职</a>
 				</div>
 				<div class="navList">
 					<div class="subNav">
 						<a href="javascript:;">相片</a>
 						<a href="javascript:;">姓名</a>
-						<a href="javascript:;">部门<span>▼</span></a>
-						<a href="javascript:;">请假类型<span>▼</span></a>
-						<a href="javascript:;">日期</a>
+						<a href="javascript:;">原职位<span>▼</span></a>
+						<a href="javascript:;">现职位<span>▼</span></a>
+						<a href="javascript:;">日期<span>▼</span></a>
 						<a href="javascript:;">操作</a>
 					</div>
-					<div class="subList"id="subList">
+					<div class="subList" id="subList">
 						<ul class="show">
 							<li>
 								<img src="img/2.png" />
 								<p>秦美丽</p>
-								<p>市场部</p>
-								<p>病假</p>
-								<p>09/07/2017-03/13/2017</p>
+								<p>业务员</p>
+								<p>主管</p>
+								<p>11/07/2015</p>
 								<a href="javascript:;">查看</a>
 							</li>
 						</ul>
@@ -47,7 +47,7 @@
 								<p>秦美丽</p>
 								<p>市场部</p>
 								<p>病假</p>
-								<p>09/07/2017-03/13/2017</p>
+								<p>11/07/2015</p>
 								<a href="javascript:;">查看</a>
 							</li>
 						</ul>
@@ -57,7 +57,7 @@
 								<p>秦美丽</p>
 								<p>市场部</p>
 								<p>病假</p>
-								<p>09/07/2017-03/13/2017</p>
+								<p>11/07/2015</p>
 								<a href="javascript:;">查看</a>
 							</li>
 						</ul>
@@ -67,7 +67,7 @@
 								<p>秦美丽</p>
 								<p>市场部</p>
 								<p>病假</p>
-								<p>09/07/2017-03/13/2017</p>
+								<p>11/07/2015</p>
 								<a href="javascript:;">查看</a>
 							</li>
 						</ul>
@@ -77,7 +77,7 @@
 								<p>秦美丽</p>
 								<p>市场部</p>
 								<p>病假</p>
-								<p>09/07/2017-03/13/2017</p>
+								<p>11/07/2015</p>
 								<a href="javascript:;">查看</a>
 							</li>
 						</ul>
@@ -87,7 +87,7 @@
 								<p>秦美丽</p>
 								<p>市场部</p>
 								<p>病假</p>
-								<p>09/07/2017-03/13/2017</p>
+								<p>11/07/2015</p>
 								<a href="javascript:;">查看</a>
 							</li>
 						</ul>
@@ -126,35 +126,15 @@
 						<i>10人</i>
 					</p>
 				</div>
-				<!--<div class="proportion">
-					<h1>各部门请假比例</h1>
-					<div class="percent">
-						<a href="javascript:;">
-							<span>50%</span>
-							<p>业务部</p>
-						</a>
-						<a href="javascript:;">
-							<span>50%</span>
-							<p>设计部</p>
-						</a>
-						<a href="javascript:;">
-							<span>50%</span>
-							<p>工程</p>
-						</a>
-						<a href="javascript:;">
-							<span>50%</span>
-							<p>财务</p>
-						</a>
-					</div>
-				</div>-->
+				
 				<div class="proportion">
-				<div id="main" style="width: 100%;height:330px;background: white;"></div>
+					<div id="main" style="width: 100%;height:330px;background: white;"></div>
 				</div>
 			</div>
 
 		</div>
 		<script>
-		var olist = document.getElementById('list')
+			var olist = document.getElementById('list')
 			var aBtn = olist.getElementsByTagName('a');
 			var osubl = document.getElementById('subList')
 			var aDiv = osubl.getElementsByTagName('ul');
@@ -170,46 +150,25 @@
 				};
 			}
 			var myChart = echarts.init(document.getElementById('main'));
-			option = {
+			var option = {
 				title: {
-					text: '某站点用户访问来源',
-
-					x: 'center'
-				},
-				tooltip: {
-					trigger: 'item',
-					formatter: "{a} <br/>{b} : {c} ({d}%)"
-				},
-				legend: {
-					orient: 'vertical',
-					x: 'left',
-					data: ['直接访问', '邮件营销', '联盟广告', '视频广告', '搜索引擎']
+					text: '各部门升迁比例'
 				},
 
-				calculable: true,
+				xAxis: {
+					data: ['市场部', '设计部', '工程部', '开发部']
+				},
+				yAxis: {
+
+				},
 				series: [{
-					name: '访问来源',
-					type: 'pie',
-					radius: '55%',
-					center: ['50%', '60%'],
-					data: [{
-						value: 335,
-						name: '直接访问'
-					}, {
-						value: 310,
-						name: '邮件营销'
-					}, {
-						value: 234,
-						name: '联盟广告'
-					}, {
-						value: 135,
-						name: '视频广告'
-					}, {
-						value: 1548,
-						name: '搜索引擎'
-					}]
+					name: '姓名 ： 年龄',
+					type: 'bar',
+					data: [1, 2, 3, 4]
 				}]
 			};
+
+			window.onresize = myChart.resize;
 			myChart.setOption(option);
 		</script>
 	</body>
